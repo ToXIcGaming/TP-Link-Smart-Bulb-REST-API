@@ -59,7 +59,15 @@ Add <code>?cmd=info</code> and the IP of the bulb with <code>&ip=0.0.0.0</code> 
 ## power
 Set power-state of lightbulb
 
+##### Turn the bulb on
+
+Add <code>?cmd=power&st=on</code> and the IP of the bulb with <code>&ip=0.0.0.0</code> to the URL to turn the bulb on
+
+##### Turn the bulb off
+
 Add <code>?cmd=power&st=off</code> and the IP of the bulb with <code>&ip=0.0.0.0</code> to the URL to turn the bulb off
+
+##### Set other state settings
 
 Add <code>?cmd=power</code> and the IP of the bulb with <code>&ip=0.0.0.0</code> to the URL
 

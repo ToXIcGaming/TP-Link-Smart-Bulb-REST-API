@@ -49,6 +49,17 @@ console.log('');
 rresponse = "Bulb Turned Off";  
 res.end(JSON.stringify(rresponse));
 	
+} else if (st == "on") {
+	
+const bulb = new TPLSmartDevice(bip);
+console.log('');
+	bulb.power(true)
+      .then(status => {
+        console.log(status)
+      })
+rresponse = "Bulb Turned Off";  
+res.end(JSON.stringify(rresponse));
+	
 } else {
 
 if (!temp & !hue) {
