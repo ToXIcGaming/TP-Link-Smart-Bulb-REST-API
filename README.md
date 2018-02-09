@@ -59,6 +59,8 @@ Add <code>?cmd=info</code> and the IP of the bulb with <code>&ip=0.0.0.0</code> 
 ## power
 Set power-state of lightbulb
 
+Add <code>?cmd=power&st=off</code> and the IP of the bulb with <code>&ip=0.0.0.0</code> to the URL to turn the bulb off
+
 Add <code>?cmd=power</code> and the IP of the bulb with <code>&ip=0.0.0.0</code> to the URL
 
 Add <code>&ct=COLOUR TEMP HERE</code> to set the bulb to a specific colour temp OR add <code>&hue=HEX CODE WITHOUT #</code> to set the bulb to a specific hue

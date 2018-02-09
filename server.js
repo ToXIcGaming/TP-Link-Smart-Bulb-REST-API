@@ -29,12 +29,26 @@ const scan = TPLSmartDevice.scan()
 
 var temp = parseInt(req.query.ct, 10);
 var hue = req.query.hue;
+var st = req.query.st;
 var bbrightness = parseInt(req.query.bri, 10);
 var trans = parseInt(req.query.trans, 10);
 var bip = req.query.ip;
 if(!bip) {
 	rresponse = 'No IP Given';
 	res.end(JSON.stringify(rresponse));
+} else {
+	
+if (st == "off") {
+	
+const bulb = new TPLSmartDevice(bip);
+console.log('');
+	bulb.power(false)
+      .then(status => {
+        console.log(status)
+      })
+rresponse = "Bulb Turned Off";  
+res.end(JSON.stringify(rresponse));
+	
 } else {
 
 if (!temp & !hue) {
@@ -131,22 +145,6 @@ res.end(JSON.stringify(rresponse));
 
 }
 
-} else if (cmd == "off") {
-
-var bip = req.query.ip;
-if(!bip) {
-	rresponse = 'No IP Given';
-	res.end(JSON.stringify(rresponse));
-} else {
-
-const bulb = new TPLSmartDevice(bip);
-console.log('');
-	bulb.power(false)
-      .then(status => {
-        console.log(status)
-      })
-rresponse = "Bulb Turned Off";  
-res.end(JSON.stringify(rresponse));
 }
 
 } else if (cmd == "info") {
