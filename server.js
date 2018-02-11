@@ -57,7 +57,7 @@ console.log('');
       .then(status => {
         console.log(status)
       })
-rresponse = "Bulb Turned Off";  
+rresponse = "Bulb Turned On";  
 res.end(JSON.stringify(rresponse));
 	
 } else {
